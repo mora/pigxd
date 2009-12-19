@@ -1,0 +1,48 @@
+pseudocode:
+
+-- Pseudo for Object --
+extend Frame, implement ActionListener and WindowListener
+create GUI object called DiceGame, accept param for "title"
+add FlowLayout
+add text boxes
+add buttons (one for player 1, one for player 2, one for stop rolling)
+add WindowListener
+add ActionListeners for those buttons
+two text boxes are for the scores, 2 text boxes are for the outcome,
+
+-- Pseudo for actionPerformed method --
+int p1score
+int p2score
+while(p1score != 100 || p2score != 100)
+randomize dice1 and dice2 from numbers 1-6
+if one of them == 1, score for round is at 0
+if both == 1. score goes to 0
+if Stop Rolling is clicked, end round for that player. Display score in score1(p1) or score2(p2)
+First to reach 100 wins
+
+-- Pseudo for windowClosing method --
+dispose()
+System.exit(0)
+
+-- Methods needed for WindowListener --
+public void windowOpened(WindowEvent e) {}
+public void windowActivated(WindowEvent e) {}
+public void windowIconified(WindowEvent e) {}
+public void windowDeiconified(WindowEvent e) {}
+public void windowDeactivated(WindowEvent e) {}
+public void windowClosed(WindowEvent e) {}
+
+
+comments:
+
+i'm gonna require a Dice object with 4 methods:
+int getD1value()
+int getD2value()
+int roll()
+int currentTotal()
+
+
+
+you may want it to extend JPanel and display a pair of die image that change according to die values
+
+
